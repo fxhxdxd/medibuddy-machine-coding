@@ -1,8 +1,16 @@
+import { Route, Routes } from "react-router"
+import MedicineDetailPage from "@/pages/MedicineDetailPage"
+import SearchPage from "@/pages/SearchPage"
+
 function App() {
   return (
-    <main>
-      <h1>MediBuddy</h1>
-    </main>
+    <Routes>
+      <Route path="/" element={<SearchPage />} />
+      <Route
+        path="/medicine/:id"
+        element={<MedicineDetailPage />}
+      />
+    </Routes>
   )
 }
 
